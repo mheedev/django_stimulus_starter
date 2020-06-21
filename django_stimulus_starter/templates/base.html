@@ -1,0 +1,14 @@
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Home {% endblock title %} | Django</title>
+    {% render_bundle 'main' 'css' 'DEFAULT' %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+
+    {% render_bundle 'main' 'js' 'DEFAULT' %}
+  </body>
+</html>
